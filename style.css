@@ -1,0 +1,342 @@
+/* 1. Basic settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fc;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* 2. Navigation bar */
+.header {
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 16px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #172554;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #374151;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+.menu-button {
+    display: none;
+    border: 0;
+    background: none;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* 3. Home section */
+.hero {
+    max-width: 1100px;
+    min-height: 470px;
+    margin: auto;
+    padding: 75px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-heading, .section-label {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    color: #172554;
+    font-size: clamp(38px, 6vw, 58px);
+    line-height: 1.15;
+    margin: 10px 0;
+}
+
+.hero h2 {
+    font-size: 20px;
+    color: #4b5563;
+    margin-bottom: 15px;
+}
+
+.hero-text {
+    max-width: 570px;
+    color: #596579;
+    margin-bottom: 24px;
+}
+
+.hero-buttons, .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.button {
+    display: inline-block;
+    padding: 11px 18px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #2563eb;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.button:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.button-outline {
+    color: #2563eb;
+    background: transparent;
+}
+
+.button-outline:hover {
+    color: white;
+}
+
+.hero-card {
+    min-width: 245px;
+    padding: 35px 25px;
+    text-align: center;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(23, 37, 84, 0.10);
+}
+
+.avatar {
+    width: 105px;
+    height: 105px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: white;
+    background: #2563eb;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.hero-card h3 {
+    color: #172554;
+    margin-bottom: 5px;
+}
+
+.hero-card p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* 4. Common section design */
+.section {
+    max-width: 1100px;
+    margin: 15px auto;
+    padding: 55px 22px;
+}
+
+.section h2 {
+    color: #172554;
+    font-size: 32px;
+    margin: 5px 0 22px;
+}
+
+.about-card, .skill-card, .project-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 5px 20px rgba(23, 37, 84, 0.06);
+}
+
+.about-card p {
+    color: #596579;
+}
+
+/* 5. Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.skill-card span {
+    color: #2563eb;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.skill-card h3 {
+    color: #172554;
+    margin: 8px 0 4px;
+}
+
+.skill-card p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* 6. Projects */
+.project-card {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.project-number {
+    color: #2563eb;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.project-card h3 {
+    color: #172554;
+    margin-bottom: 8px;
+}
+
+.project-card p {
+    color: #64748b;
+}
+
+.project-tech {
+    margin-top: 10px;
+    color: #2563eb !important;
+    font-weight: bold;
+}
+
+.project-note {
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+/* 7. Contact and footer */
+.contact-section {
+    padding-bottom: 65px;
+}
+
+.contact-intro {
+    color: #64748b;
+    margin-bottom: 18px;
+}
+
+.contact-detail {
+    margin-top: 12px;
+    color: #596579;
+}
+
+footer {
+    padding: 22px;
+    background: #172554;
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    display: inline-block;
+    color: #bfdbfe;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+/* 8. Mobile screen design */
+@media (max-width: 700px) {
+    .menu-button {
+        display: block;
+        color: #172554;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        padding: 18px;
+        background: white;
+        flex-direction: column;
+        gap: 14px;
+        text-align: center;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hero {
+        padding-top: 55px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-card {
+        align-self: center;
+        width: 100%;
+        max-width: 330px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .section h2 {
+        font-size: 27px;
+    }
+
+    .project-card {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
